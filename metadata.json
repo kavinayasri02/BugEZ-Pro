@@ -1,0 +1,6 @@
+{
+  "name": "BugEZ Pro",
+  "description": "AI-powered code debugging, multi-file and GitHub analysis, side-by-side auto-fixing, risk matrix, and unit test generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
