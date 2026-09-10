@@ -70,45 +70,47 @@ Upload Code / GitHub Repository
        Save Audit History
 
 
-🧩 Supported Analysis
+## 🔍🧩 **Supported Analysis**
 
-BugEZ Pro can analyze source code for:
--> Logic and syntax errors
--> Security vulnerabilities
--> Performance bottlenecks
--> Time and space complexity
--> Incorrect algorithms
--> Potential runtime failures
--> Edge cases
--> Invalid input handling
--> Code quality issues
--> Cross-file dependency problems
--> Interface and module inconsistencies
+- **🐛 Bug Detection** — Identifies logic errors, syntax issues, runtime problems, and potential defects in source code.
+- **🔐 Security Analysis** — Detects common security vulnerabilities, unsafe coding practices, and potential security risks.
+- **⚡ Performance Analysis** — Identifies inefficient code, performance bottlenecks, and time/space complexity concerns.
+- **🧠 Code Quality Analysis** — Reviews code structure, readability, maintainability, and potential improvements.
+- **📊 Complexity Analysis** — Evaluates algorithmic time and space complexity and highlights inefficient approaches.
+- **🧪 Test Coverage Analysis** — Identifies edge cases, failure scenarios, and missing test scenarios for generating comprehensive unit tests.
+- **🔗 Multi-File Analysis** — Examines imports, dependencies, interfaces, and relationships between multiple source files.
+- **🏗️ Architecture Analysis** — Reviews project structure, module organization, dependencies, and potential architectural issues.
+- **🛠️ Automated Code Repair** — Generates AI-powered fixes for detected issues and provides visual differences between original and corrected code.
 
+## 🛠️ **Tech Stack**
 
-🛠️ Tech Stack
+### **Frontend**
 
-Frontend
-React
-TypeScript
-Tailwind CSS
-Vite
-Lucide React
-JSZip
-Backend
-Node.js
-Express.js
-TypeScript
-WebSockets
-AI & APIs
-Google Gemini API
-@google/genai
-GitHub REST API
-Groq API support
-Deployment
-GitHub
-Render
+- **React** — Component-based UI development
+- **TypeScript** — Type-safe application development
+- **Tailwind CSS** — Responsive and utility-first styling
+- **Vite** — Fast development and production build tooling
+- **Lucide React** — Modern interface icons
+- **JSZip** — ZIP file extraction and multi-file project handling
 
+### **Backend**
+
+- **Node.js** — Server-side JavaScript runtime
+- **Express.js** — Backend API and server framework
+- **TypeScript** — Backend type safety
+- **WebSockets** — Real-time communication and streaming
+
+### **AI & APIs**
+
+- **Google Gemini API** — AI-powered code analysis, repair, and test generation
+- **@google/genai** — Official Google Gemini SDK
+- **GitHub REST API** — Public repository and source-code inspection
+- **Groq API** — Additional LLM provider support
+
+### **Deployment**
+
+- **GitHub** — Source code management and version control
+- **Render** — Production hosting and deployment
 
 📂 Project Structure
 BugEZ-Pro/
