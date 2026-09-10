@@ -68,22 +68,26 @@ Upload Code / GitHub Repository
       Generate Unit Tests
               ↓
        Save Audit History
+
+
 🧩 Supported Analysis
 
 BugEZ Pro can analyze source code for:
+-> Logic and syntax errors
+-> Security vulnerabilities
+-> Performance bottlenecks
+-> Time and space complexity
+-> Incorrect algorithms
+-> Potential runtime failures
+-> Edge cases
+-> Invalid input handling
+-> Code quality issues
+-> Cross-file dependency problems
+-> Interface and module inconsistencies
 
-Logic and syntax errors
-Security vulnerabilities
-Performance bottlenecks
-Time and space complexity
-Incorrect algorithms
-Potential runtime failures
-Edge cases
-Invalid input handling
-Code quality issues
-Cross-file dependency problems
-Interface and module inconsistencies
+
 🛠️ Tech Stack
+
 Frontend
 React
 TypeScript
@@ -104,6 +108,8 @@ Groq API support
 Deployment
 GitHub
 Render
+
+
 📂 Project Structure
 BugEZ-Pro/
 │
@@ -125,7 +131,10 @@ BugEZ-Pro/
 ├── tsconfig.json
 ├── .gitignore
 └── README.md
+
+
 🛠️ Getting Started
+
 # Clone the repository
 git clone https://github.com/kavinayasri02/BugEZ-Pro.git
 
@@ -143,14 +152,11 @@ npm run build
 
 # Start production server
 npm start
+
 🔑 Environment Variables
-
 Create a .env file in the project root and configure the required API credentials:
-
 GEMINI_API_KEY=your_gemini_api_key
-
 If additional AI providers are enabled in the application, configure their corresponding environment variables as required.
-
 ⚠️ Never commit .env files or API keys to GitHub. Keep sensitive credentials in environment variables.
 
 🔐 Security
