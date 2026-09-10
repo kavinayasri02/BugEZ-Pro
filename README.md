@@ -1,230 +1,289 @@
-# ⚡ BugEZ Pro — AI Code Analyzer & Repair Platform
+# ⚡ **BugEZ Pro — AI Code Analyzer & Repair Platform**
 
-A modern, full-stack AI-powered code analysis, vulnerability scanning, and automated code repair platform designed to help developers detect bugs, identify security vulnerabilities, analyze performance issues, generate fixes, and create unit tests from a single workspace.
+BugEZ Pro is a modern, full-stack AI-powered code analysis and repair platform designed to help developers detect bugs, identify security vulnerabilities, analyze performance issues, generate automated fixes, and create unit tests from a single development environment.
 
-Built with React, TypeScript, Tailwind CSS, Vite, Node.js, and Express, BugEZ Pro combines AI-powered analysis with an interactive developer workspace for reviewing, fixing, and testing source code.
+The platform combines AI-powered code analysis with multi-file project auditing, GitHub repository inspection, visual code diffs, severity-based issue tracking, and persistent audit history.
 
-**🚀 Live Demo:** https://bugez-pro-3ed3.onrender.com/
+---
 
 ## ✨ **Features**
 
-- **🚀 Real-Time Streaming Code Analysis**: Performs AI-powered code audits with real-time streaming results, analyzing logic errors, syntax issues, time and space complexity, performance bottlenecks, security risks, and potential edge cases.
+- **🚀 Real-Time Code Analysis** — Analyze source code and receive AI-powered insights for bugs, security issues, performance problems, complexity, and code quality.
 
-- **🛠️ "Fix My Code" Mode with Visual Diffs**: Automatically generates AI-powered code fixes and provides side-by-side comparison between the original and corrected code, including unified and split diff views with a 1-click "Apply to Editor" option.
+- **🐛 Automated Bug Detection** — Identifies syntax errors, logical issues, runtime risks, incorrect implementations, and potential defects.
 
-- **🛡️ Severity-Tagged Bug Matrix**: Organizes detected issues into a structured risk matrix with Critical, High, Medium, and Low severity levels, along with category filtering for Bugs, Performance, and Security issues.
+- **🛡️ Security Vulnerability Detection** — Detects common security vulnerabilities, unsafe coding practices, insecure implementations, and potential security risks.
 
-- **🧪 Unit Test Generator**: Generates automated unit test suites based on the analyzed code, covering normal cases, edge cases, invalid inputs, boundary conditions, and potential failure scenarios across frameworks such as Jest, pytest, JUnit, and GoogleTest.
+- **⚡ Performance Analysis** — Identifies inefficient algorithms, performance bottlenecks, unnecessary operations, and time/space complexity concerns.
 
-- **📁 Drag & Drop File Upload**: Supports uploading individual source files through a simple drag-and-drop interface with instant client-side file reading for multiple programming languages including `.py`, `.java`, `.cpp`, `.js`, `.ts`, `.go`, `.rs`, and more.
+- **🛠️ AI-Powered Code Repair** — Generates improved versions of problematic code and provides AI-assisted solutions for detected issues.
 
-- **🧠 Intelligent Language Auto-Detection**: Automatically identifies the programming language using filename extensions and code patterns, reducing the need for manual language selection.
+- **🔀 Visual Code Diff** — Displays the differences between the original and corrected code, making changes easier to review.
 
-- **🗂️ Multi-File & ZIP Project Analysis**: Allows users to upload complete projects or ZIP packages and analyze multiple files together, enabling cross-module import analysis, interface validation, dependency inspection, and architecture-level auditing.
+- **📊 Severity-Ranked Bug Matrix** — Organizes detected issues according to Critical, High, Medium, and Low severity levels.
 
-- **🐙 Public GitHub Repository Inspector**: Fetches and analyzes public GitHub repositories directly using GitHub REST APIs, with support for repository exploration, branch selection, file inspection, and multi-file code auditing.
+- **🧪 Unit Test Generation** — Automatically generates unit tests covering normal cases, edge cases, failure scenarios, and potential regressions.
 
-- **📜 Persistent Audit History**: Stores previous analyses, generated fixes, bug matrices, and unit test results in a persistent JSON-based history store, with support for exporting and restoring audit data.
+- **📁 Drag & Drop File Upload** — Upload supported source files directly into the platform for analysis.
 
-- **🤖 Multi-Model AI Architecture**: Uses Google Gemini for AI-powered code analysis and repair, with an extensible architecture that can support additional AI providers such as Groq and different LLM models.
+- **🧠 Automatic Language Detection** — Detects programming languages using file extensions and source-code patterns.
 
-- **🔐 Secure AI API Integration**: AI API requests are handled through the Express backend so API credentials are not exposed directly in the frontend application.
+- **🗂️ Multi-File & ZIP Analysis** — Analyze complete projects containing multiple source files, imports, dependencies, and module relationships.
 
-## 🏗️ **Architecture**
+- **🐙 GitHub Repository Inspector** — Inspect and analyze public GitHub repositories using the GitHub REST API.
 
-- **Frontend**: React, TypeScript, Tailwind CSS, Vite, Lucide Icons, JSZip, and interactive code editing components.
+- **📜 Persistent Audit History** — Store previous analysis results and restore them whenever required.
 
-- **Backend**: Node.js and Express server (`server.ts`) responsible for API communication, AI request handling, code analysis workflows, GitHub repository integration, and WebSocket-based communication.
+- **🤖 AI Model Integration** — Uses Google Gemini as the primary AI provider with support for additional AI model integrations.
 
-- **AI Layer**: Google Gemini SDK (`@google/genai`) powers code analysis, bug detection, code repair, explanations, and unit test generation.
-
-- **Repository Integration**: GitHub REST API is used to retrieve and inspect source files from public repositories.
-
-- **Persistence**: File-based JSON store in `data/bugez_history.json` maintains audit history and allows previous analysis results to be restored.
-
-- **Communication**: WebSockets enable real-time communication and streaming responses between the frontend and backend.
+---
 
 ## 🔄 **Application Workflow**
 
-Upload Code / GitHub Repository
-              ↓
-     Language Detection
-              ↓
-      AI Code Analysis
-              ↓
- ┌────────────┬────────────┬─────────────┐
- │ Bug Scan   │ Security   │ Performance │
- └────────────┴────────────┴─────────────┘
-              ↓
-      Severity Bug Matrix
-              ↓
-       AI Fix Generation
-              ↓
-       Visual Code Diff
-              ↓
-        Apply Fix to Code
-              ↓
-      Generate Unit Tests
-              ↓
-       Save Audit History
+BugEZ Pro follows a structured workflow that takes developers from code submission to analysis, repair, testing, and audit history.
 
+**1. Upload Code / GitHub Repository**  
+Submit individual source files, multiple files, ZIP projects, or a public GitHub repository.
+
+**2. Language Detection**  
+The platform automatically identifies the programming language and prepares the submitted code for analysis.
+
+**3. AI Code Analysis**  
+The AI engine analyzes the submitted source code for bugs, security vulnerabilities, performance issues, complexity, and code-quality concerns.
+
+**4. Bug Detection**  
+Potential bugs and logical problems are identified and categorized.
+
+**5. Security Analysis**  
+The submitted code is reviewed for common vulnerabilities and unsafe coding practices.
+
+**6. Performance Analysis**  
+Algorithms and implementation patterns are evaluated for inefficiencies and performance bottlenecks.
+
+**7. Severity-Based Bug Matrix**  
+Detected issues are organized according to severity levels such as Critical, High, Medium, and Low.
+
+**8. AI Fix Generation**  
+The platform generates suggested fixes for detected issues.
+
+**9. Visual Code Diff**  
+The original and corrected code are compared so developers can clearly review the proposed changes.
+
+**10. Apply Fix to Code**  
+Developers can apply the generated corrections to the code editor.
+
+**11. Generate Unit Tests**  
+The platform generates unit tests to validate the corrected implementation and cover important edge cases.
+
+**12. Save Audit History**  
+Analysis results, fixes, bug findings, and generated tests can be stored for future reference.
+
+---
 
 ## 🔍🧩 **Supported Analysis**
 
 - **🐛 Bug Detection** — Identifies logic errors, syntax issues, runtime problems, and potential defects in source code.
+
 - **🔐 Security Analysis** — Detects common security vulnerabilities, unsafe coding practices, and potential security risks.
+
 - **⚡ Performance Analysis** — Identifies inefficient code, performance bottlenecks, and time/space complexity concerns.
-- **🧠 Code Quality Analysis** — Reviews code structure, readability, maintainability, and potential improvements.
+
+- **🧠 Code Quality Analysis** — Reviews code structure, readability, maintainability, organization, and potential improvements.
+
 - **📊 Complexity Analysis** — Evaluates algorithmic time and space complexity and highlights inefficient approaches.
-- **🧪 Test Coverage Analysis** — Identifies edge cases, failure scenarios, and missing test scenarios for generating comprehensive unit tests.
+
+- **🧪 Test Coverage Analysis** — Identifies edge cases, failure scenarios, and missing test scenarios for comprehensive test generation.
+
 - **🔗 Multi-File Analysis** — Examines imports, dependencies, interfaces, and relationships between multiple source files.
+
 - **🏗️ Architecture Analysis** — Reviews project structure, module organization, dependencies, and potential architectural issues.
+
 - **🛠️ Automated Code Repair** — Generates AI-powered fixes for detected issues and provides visual differences between original and corrected code.
+
+---
 
 ## 🛠️ **Tech Stack**
 
 ### **Frontend**
 
-- **React** — Component-based UI development
-- **TypeScript** — Type-safe application development
-- **Tailwind CSS** — Responsive and utility-first styling
-- **Vite** — Fast development and production build tooling
-- **Lucide React** — Modern interface icons
-- **JSZip** — ZIP file extraction and multi-file project handling
+- **React** — Component-based user interface development.
+- **TypeScript** — Type-safe application development.
+- **Tailwind CSS** — Responsive and utility-first styling.
+- **Vite** — Fast development and production build tooling.
+- **Lucide React** — Modern and reusable interface icons.
+- **JSZip** — ZIP extraction and multi-file project handling.
 
 ### **Backend**
 
-- **Node.js** — Server-side JavaScript runtime
-- **Express.js** — Backend API and server framework
-- **TypeScript** — Backend type safety
-- **WebSockets** — Real-time communication and streaming
+- **Node.js** — Server-side JavaScript runtime.
+- **Express.js** — Backend API and server framework.
+- **TypeScript** — Backend type safety and development.
+- **WebSockets** — Real-time communication and streaming support.
 
 ### **AI & APIs**
 
-- **Google Gemini API** — AI-powered code analysis, repair, and test generation
-- **@google/genai** — Official Google Gemini SDK
-- **GitHub REST API** — Public repository and source-code inspection
-- **Groq API** — Additional LLM provider support
+- **Google Gemini API** — AI-powered code analysis, repair, and test generation.
+- **@google/genai** — Google Gemini SDK integration.
+- **GitHub REST API** — Public repository and source-code inspection.
+- **Groq API** — Additional LLM provider support.
 
-### **Deployment**
+### **Development & Deployment**
 
-- **GitHub** — Source code management and version control
-- **Render** — Production hosting and deployment
+- **GitHub** — Source-code management and version control.
+- **Render** — Production hosting and deployment.
 
-📂 Project Structure
-BugEZ-Pro/
-│
-├── src/
-│   ├── components/
-│   ├── services/
-│   ├── types/
-│   └── ...
-│
-├── public/
-│
-├── data/
-│   └── bugez_history.json
-│
-├── server.ts
-├── package.json
-├── package-lock.json
-├── vite.config.ts
-├── tsconfig.json
-├── .gitignore
-└── README.md
+---
 
+## 📂 **Project Structure**
 
-🛠️ Getting Started
+- **📁 `src/`** — Main frontend application source code.
+  - **📁 `components/`** — Reusable React components.
+  - **📁 `services/`** — Application services and API-related functionality.
+  - **📁 `types/`** — TypeScript type definitions.
 
-# Clone the repository
-git clone https://github.com/kavinayasri02/BugEZ-Pro.git
+- **📁 `public/`** — Public static assets.
 
-# Navigate to the project
-cd BugEZ-Pro
+- **📁 `data/`** — Persistent application data.
+  - **📄 `bugez_history.json`** — Stored audit history.
 
-# Install dependencies
-npm install
+- **📄 `server.ts`** — Express backend server and AI API integration.
 
-# Start development server
-npm run dev
+- **📄 `package.json`** — Project dependencies and scripts.
 
-# Create production build
-npm run build
+- **📄 `package-lock.json`** — Locked dependency versions.
 
-# Start production server
-npm start
+- **📄 `vite.config.ts`** — Vite configuration.
+
+- **📄 `tsconfig.json`** — TypeScript configuration.
+
+- **📄 `.gitignore`** — Git ignore configuration.
+
+- **📄 `README.md`** — Project documentation.
+
+---
+
+## 🛠️ **Getting Started**
+
+### **1. Clone the Repository**
+
+Clone the BugEZ Pro repository to your local development environment.
+
+### **2. Navigate to the Project**
+
+Open the project directory in your terminal or VS Code.
+
+### **3. Install Dependencies**
+
+Install all required project dependencies using npm.
+
+### **4. Configure Environment Variables**
+
+Create a `.env` file and add the required API credentials.
+
+### **5. Start the Development Server**
+
+Run the development server and open the application in your browser.
+
+### **6. Create a Production Build**
+
+Build the application for production deployment.
+
+### **7. Start the Production Server**
+
+Run the production server to serve the application.
+
+---
 
 ## 🔑 **Environment Variables**
 
-Create a `.env` file in the project root and configure the required API credentials:
+BugEZ Pro requires an API key for AI-powered code analysis.
 
-`GEMINI_API_KEY=your_gemini_api_key`
+The required environment variable is:
 
-If additional AI providers are enabled in the application, configure their corresponding environment variables as required.
+**`GEMINI_API_KEY`** — Google Gemini API key used by the backend for AI-powered analysis and code generation.
 
-⚠️ **Never commit `.env` files or API keys to GitHub.** Keep sensitive credentials in environment variables.
+The API key should be stored securely as an environment variable and must never be exposed directly in frontend source code.
+
+> ⚠️ **Never commit `.env` files, API keys, or other sensitive credentials to GitHub.**
+
+---
 
 ## 🔐 **Security**
 
-BugEZ Pro is designed to keep AI API credentials on the backend rather than exposing them directly in the browser.
+BugEZ Pro is designed to keep sensitive AI credentials on the backend rather than exposing them directly in the browser.
 
-The application uses environment variables for sensitive configuration such as:
+Security considerations include:
 
-**`GEMINI_API_KEY`**
+- **🔑 Environment-Based Credentials** — API keys are loaded through environment variables.
 
-The `.gitignore` configuration prevents sensitive files and generated dependencies from being committed: **`node_modules/`**   **`dist/**`   **`.env`**
+- **🛡️ Backend API Proxying** — AI provider requests are handled through the backend server.
+
+- **🚫 Sensitive File Protection** — Environment files and generated dependencies are excluded from version control.
+
+- **🔒 API Key Protection** — Secret credentials should never be hardcoded into source files or committed to public repositories.
+
+---
 
 ## 🌐 **Deployment**
 
 BugEZ Pro is deployed as a **Node.js Web Service using Render**.
 
-The production workflow is:
+The production deployment process follows this workflow:
 
-**GitHub Repository**  
-↓  
-**Render Deployment**  
-↓  
-**npm install**  
-↓  
-**npm run build**  
-↓  
-**Express Server**  
-↓  
-**Live Application**
+**GitHub Repository → Render Deployment → Dependency Installation → Production Build → Express Server → Live Application**
 
-🚀 **Live Application:**  
-https://bugez-pro-3ed3.onrender.com/
+### **🚀 Live Application**
+
+**https://bugez-pro-3ed3.onrender.com/**
+
+---
 
 ## 🎯 **Use Cases**
 
 BugEZ Pro can be used for:
 
 - **👨‍💻 Developer Code Review** — Quickly review source code and identify potential problems.
-- **🎓 Learning & Education** — Help students understand programming errors and improve their code.
+
+- **🎓 Learning & Education** — Help students understand programming errors and improve their coding skills.
+
 - **🐛 Debugging** — Detect potential bugs and generate AI-assisted corrections.
+
 - **🔐 Security Review** — Identify common security vulnerabilities and risky coding patterns.
+
 - **⚡ Performance Optimization** — Analyze inefficient algorithms and potential performance bottlenecks.
+
 - **🧪 Test Generation** — Automatically create test cases for existing code.
+
 - **🔎 Repository Analysis** — Inspect and analyze public GitHub repositories.
-- **🛠️ Rapid Prototyping** — Quickly experiment with AI-generated fixes and improvements.
+
+- **🗂️ Project Analysis** — Analyze multi-file and ZIP-based software projects.
+
+- **🛠️ Rapid Prototyping** — Quickly experiment with AI-generated fixes and code improvements.
+
+---
 
 ## 💡 **Why BugEZ Pro?**
 
-Traditional debugging often requires developers to switch between multiple tools for:
+Traditional debugging often requires developers to switch between multiple tools and workflows:
 
-**Code Review → Bug Detection → Security Analysis → Fixing → Test Generation**
+**Code Review → Bug Detection → Security Analysis → Performance Analysis → Fixing → Testing**
 
-BugEZ Pro combines these workflows into a **single AI-assisted development environment**.
+BugEZ Pro combines these activities into a **single AI-assisted development environment**.
+
+The platform provides a simple workflow:
 
 **Analyze → Understand → Fix → Test**
 
-The goal is to provide developers with a faster and more interactive way to understand problems in their code and move from **error detection to working solutions**.
+This helps developers move from identifying a problem to understanding, correcting, and validating the solution within one platform.
+
+---
 
 ## 📌 **Project Highlights**
 
 - ⚡ **Real-Time AI-Powered Code Analysis**
 - 🐛 **Automated Bug Detection**
 - 🔐 **Security Vulnerability Analysis**
+- ⚡ **Performance Analysis**
 - 📊 **Severity-Ranked Bug Matrix**
 - 🛠️ **AI-Generated Code Fixes**
 - 🔀 **Visual Code Diffs**
@@ -236,13 +295,41 @@ The goal is to provide developers with a faster and more interactive way to unde
 - 🤖 **Gemini-Powered AI Architecture**
 - 🌐 **Production Deployment on Render**
 
+---
+
+## 🚀 **Future Enhancements**
+
+Potential future improvements for BugEZ Pro include:
+
+- **🔄 Additional AI Model Providers** — Expand support for more LLM providers and specialized coding models.
+
+- **🔐 Private Repository Support** — Enable secure analysis of private repositories with authenticated access.
+
+- **📈 Advanced Analytics** — Provide detailed project quality metrics and historical analysis trends.
+
+- **🧪 Automated Test Execution** — Run generated tests automatically and display test results.
+
+- **📊 Code Quality Dashboard** — Introduce project-level quality scores and detailed analytics.
+
+- **👥 Team Collaboration** — Enable developers to share audits, findings, and fixes with team members.
+
+---
+
 ## 👩‍💻 **Author**
 
 **Kavinayasri J**
 
 **GitHub:**  
-https://github.com/kavinayasri02
+**https://github.com/kavinayasri02**
+
+---
 
 ## ⭐ **Support**
 
-If you find BugEZ Pro useful, consider giving the repository a ⭐ on GitHub. Feedback, improvements, and contributions are always welcome.
+If you find **BugEZ Pro** useful, consider giving the repository a ⭐ on GitHub. Feedback, improvements, and contributions are always welcome.
+
+---
+
+## 📄 **License**
+
+This project is created for development, learning, and demonstration purposes.
