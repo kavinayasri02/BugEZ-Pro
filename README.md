@@ -46,7 +46,6 @@ Built with React, TypeScript, Tailwind CSS, Vite, Node.js, and Express, BugEZ Pr
 
 ## 🔄 **Application Workflow**
 
-```text
 Upload Code / GitHub Repository
               ↓
      Language Detection
@@ -155,25 +154,18 @@ npm run build
 # Start production server
 npm start
 
-🔑 Environment Variables
-Create a .env file in the project root and configure the required API credentials:
+## 🔑 **Environment Variables**
+
+Create a `.env` file in the project root and configure the required API credentials:
+
+```env
 GEMINI_API_KEY=your_gemini_api_key
-If additional AI providers are enabled in the application, configure their corresponding environment variables as required.
-⚠️ Never commit .env files or API keys to GitHub. Keep sensitive credentials in environment variables.
 
 🔐 Security
-
 BugEZ Pro is designed to keep AI API credentials on the backend rather than exposing them directly in the browser.
+The application uses environment variables for sensitive configuration such as: GEMINI_API_KEY
+The .gitignore configuration prevents sensitive files and generated dependencies from being committed: node_modules/ dist/.env
 
-The application uses environment variables for sensitive configuration such as:
-
-GEMINI_API_KEY
-
-The .gitignore configuration prevents sensitive files and generated dependencies from being committed:
-
-node_modules/
-dist/
-.env
 🌐 Deployment
 
 BugEZ Pro is deployed as a Node.js Web Service using Render.
@@ -192,23 +184,26 @@ Express Server
        ↓
 Live Application
 
-🚀 Live Application: https://bugez-pro-3ed3.onrender.com/
+
+🚀 Live Application:
+https://bugez-pro-3ed3.onrender.com/
 
 🎯 Use Cases
-
 BugEZ Pro can be used for:
 
-👨‍💻 Developer Code Review: Quickly review source code and identify potential problems.
-🎓 Learning & Education: Help students understand programming errors and improve their code.
-🐛 Debugging: Detect potential bugs and generate AI-assisted corrections.
-🔐 Security Review: Identify common security vulnerabilities and risky coding patterns.
-⚡ Performance Optimization: Analyze inefficient algorithms and potential performance bottlenecks.
-🧪 Test Generation: Automatically create test cases for existing code.
-🔎 Repository Analysis: Inspect and analyze public GitHub repositories.
-🛠️ Rapid Prototyping: Quickly experiment with AI-generated fixes and improvements.
+👨‍💻 Developer Code Review — Quickly review source code and identify potential problems.
+🎓 Learning & Education — Help students understand programming errors and improve their code.
+🐛 Debugging — Detect potential bugs and generate AI-assisted corrections.
+🔐 Security Review — Identify common security vulnerabilities and risky coding patterns.
+⚡ Performance Optimization — Analyze inefficient algorithms and potential performance bottlenecks.
+🧪 Test Generation — Automatically create test cases for existing code.
+🔎 Repository Analysis — Inspect and analyze public GitHub repositories.
+🛠️ Rapid Prototyping — Quickly experiment with AI-generated fixes and improvements.
 💡 Why BugEZ Pro?
 
-Traditional debugging often requires developers to switch between multiple tools for code review, bug detection, security analysis, fixing, and test generation.
+Traditional debugging often requires developers to switch between multiple tools for:
+
+Code Review → Bug Detection → Security Analysis → Fixing → Test Generation
 
 BugEZ Pro combines these workflows into a single AI-assisted development environment.
 
@@ -217,24 +212,28 @@ Analyze → Understand → Fix → Test
 The goal is to provide developers with a faster and more interactive way to understand problems in their code and move from error detection to working solutions.
 
 📌 Project Highlights
-⚡ Real-time AI-powered code analysis
-🐛 Automated bug detection
-🔐 Security vulnerability analysis
-📊 Severity-ranked bug matrix
-🛠️ AI-generated code fixes
-🔀 Visual code diffs
-🧪 Automated unit test generation
-📁 Multi-file and ZIP project analysis
-🐙 GitHub repository inspection
-🧠 Automatic language detection
-📜 Persistent audit history
-🤖 Gemini-powered AI architecture
-🌐 Production deployment on Render
-
+⚡ Real-Time AI-Powered Code Analysis
+🐛 Automated Bug Detection
+🔐 Security Vulnerability Analysis
+📊 Severity-Ranked Bug Matrix
+🛠️ AI-Generated Code Fixes
+🔀 Visual Code Diffs
+🧪 Automated Unit Test Generation
+📁 Multi-File and ZIP Project Analysis
+🐙 GitHub Repository Inspection
+🧠 Automatic Language Detection
+📜 Persistent Audit History
+🤖 Gemini-Powered AI Architecture
+🌐 Production Deployment on Render
 👩‍💻 Author
+
 Kavinayasri J
-GitHub: https://github.com/kavinayasri02
+
+GitHub:
+https://github.com/kavinayasri02
 
 ⭐ Support
+
 If you find BugEZ Pro useful, consider giving the repository a ⭐ on GitHub.
+
 Feedback, improvements, and contributions are always welcome.
